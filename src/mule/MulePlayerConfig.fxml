@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mule.MulePlayerConfigController">
+   <children>
+      <Label alignment="TOP_CENTER" layoutX="180.0" layoutY="32.0" text="Player Configuration" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Bold" size="65.0" />
+         </font>
+      </Label>
+      <TabPane fx:id="tabPane" layoutY="130.0" prefHeight="600.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab closable="false" text="Player 1">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="1000.0">
+                     <children>
+                        <Label layoutX="82.0" layoutY="49.0" text="Name">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="player1NameTextField" layoutX="200.0" layoutY="50.0" prefHeight="51.0" prefWidth="700.0">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="82.0" layoutY="126.0" text="Race">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="77.0" layoutY="199.0" text="Color">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <ColorPicker fx:id="player1Color" layoutX="195.0" layoutY="200.0" prefHeight="50.0" prefWidth="243.0" />
+                        <ImageView fitHeight="300.0" fitWidth="300.0" layoutX="600.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../../Downloads/anonymous.png" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="430.0" layoutY="430.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="152.0" text="Upload Image">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <ChoiceBox fx:id="player1Race" layoutX="193.0" layoutY="137.0" prefWidth="150.0" />
+                        <Button fx:id="player1Reset" layoutX="180.0" layoutY="436.0" mnemonicParsing="false" text="Reset current">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab closable="false" text="Player 2">
+               <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="430.0" layoutY="430.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="152.0" text="Upload Image">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="300.0" fitWidth="300.0" layoutX="600.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../../Downloads/anonymous.png" />
+                           </image>
+                        </ImageView>
+                        <ColorPicker fx:id="player2Color" layoutX="195.0" layoutY="200.0" prefHeight="50.0" prefWidth="243.0" />
+                        <Label layoutX="77.0" layoutY="199.0" text="Color">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="82.0" layoutY="126.0" text="Race">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="player2NameTextField" layoutX="200.0" layoutY="50.0" prefHeight="51.0" prefWidth="700.0">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="82.0" layoutY="49.0" text="Name">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="player2Race" layoutX="193.0" layoutY="137.0" prefWidth="150.0" />
+                        <Button fx:id="player2Reset" layoutX="182.0" layoutY="435.0" mnemonicParsing="false" text="Reset current">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+          </Tab>
+            <Tab text="Player 3">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="430.0" layoutY="430.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="152.0" text="Upload Image">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="300.0" fitWidth="300.0" layoutX="600.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../../Downloads/anonymous.png" />
+                           </image>
+                        </ImageView>
+                        <ColorPicker fx:id="player3Color" layoutX="195.0" layoutY="200.0" prefHeight="50.0" prefWidth="243.0" />
+                        <Label layoutX="77.0" layoutY="199.0" text="Color">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="82.0" layoutY="126.0" text="Race">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="player3NameTextField" layoutX="200.0" layoutY="50.0" prefHeight="51.0" prefWidth="700.0">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="82.0" layoutY="49.0" text="Name">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="player3Race" layoutX="193.0" layoutY="137.0" prefWidth="150.0" />
+                        <Button fx:id="player3Reset" layoutX="190.0" layoutY="439.0" mnemonicParsing="false" text="Reset current">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Player 4">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="430.0" layoutY="430.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="152.0" text="Upload Image">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="300.0" fitWidth="300.0" layoutX="600.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../../Downloads/anonymous.png" />
+                           </image>
+                        </ImageView>
+                        <ColorPicker fx:id="player4Color" layoutX="195.0" layoutY="200.0" prefHeight="50.0" prefWidth="243.0" />
+                        <Label layoutX="77.0" layoutY="199.0" text="Color">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="82.0" layoutY="126.0" text="Race">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="player4NameTextField" layoutX="200.0" layoutY="50.0" prefHeight="51.0" prefWidth="700.0">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="82.0" layoutY="49.0" text="Name">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="player4Race" layoutX="193.0" layoutY="137.0" prefWidth="150.0" />
+                        <Button fx:id="player4Reset" layoutX="204.0" layoutY="441.0" mnemonicParsing="false" text="Reset current">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+         <effect>
+            <DropShadow color="#518282" />
+         </effect>
+      </TabPane>
+      <Button fx:id="confirmButton" layoutX="870.0" layoutY="747.0" mnemonicParsing="false" onAction="#handleConfirmButtonAction" text="Next">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="resetAllButton" layoutX="720.0" layoutY="747.0" mnemonicParsing="false" text="Reset all">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

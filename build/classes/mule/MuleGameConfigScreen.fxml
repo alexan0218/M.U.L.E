@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mule.MuleGameConfigScreenController">
+   <children>
+      <Label alignment="TOP_CENTER" layoutX="194.0" layoutY="102.0" text="Game Configuration" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Bold" size="65.0" />
+         </font>
+      </Label>
+      <Label layoutX="94.0" layoutY="282.0" text="DIfficulty">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+      <Label layoutX="127.0" layoutY="400.0" text="Map">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="246.0" layoutY="358.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="446.0" layoutY="358.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="646.0" layoutY="358.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="38.0" layoutY="555.0" text="Number of Player">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="myChoices" layoutX="375.0" layoutY="565.0" prefHeight="26.0" prefWidth="246.0" />
+      <Button layoutX="646.0" layoutY="727.0" mnemonicParsing="false" text="Reset">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="confirmButton" layoutX="738.0" layoutY="726.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Confirm n' Go !">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <ChoiceBox fx:id="myDifficulty" layoutX="375.0" layoutY="290.0" prefHeight="26.0" prefWidth="246.0" />
+      <ChoiceBox fx:id="myMaps" layoutX="375.0" layoutY="408.0" prefHeight="26.0" prefWidth="246.0" />
+   </children>
+</AnchorPane>

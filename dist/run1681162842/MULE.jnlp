@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="MULE.jnlp">
+  <information>
+    <title>MULE</title>
+    <vendor>Alex</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="MULE.jar" size="4521410" download="eager" />
+    <jar href="lib/mysql-connector-java-5.1.37-bin.jar" size="985603" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="MULE" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="mule.MULE"  name="MULE" />
+  <update check="always"/>
+</jnlp>

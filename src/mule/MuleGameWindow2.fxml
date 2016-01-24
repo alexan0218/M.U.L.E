@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="mule.MuleGameWindowController">
+  <children>
+    <Label fx:id="currentState" layoutX="1000.0" layoutY="55.0" prefHeight="51.0" prefWidth="190.0" />
+    <Button fx:id="passButton" layoutX="1000.0" layoutY="278.0" mnemonicParsing="false" onAction="#passButtonAction" text="Pass" />
+    <Label fx:id="player1State" layoutX="1000.0" layoutY="106.0" prefHeight="43.0" prefWidth="191.0" />
+    <Label fx:id="player2State" layoutX="1000.0" layoutY="149.0" prefHeight="43.0" prefWidth="191.0" />
+    <Label fx:id="player3State" layoutX="1000.0" layoutY="192.0" prefHeight="43.0" prefWidth="191.0" />
+    <Label fx:id="player4State" layoutX="1000.0" layoutY="235.0" prefHeight="43.0" prefWidth="191.0" />
+    <Label fx:id="currentPlayer" layoutX="1000.0" layoutY="304.0" prefHeight="43.0" prefWidth="191.0" />
+    <Label fx:id="timeCD" layoutX="1000.0" layoutY="347.0" prefHeight="43.0" prefWidth="191.0" />
+    <GridPane gridLinesVisible="true" prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: #EFE4B0;">
+      <children>
+        <ImageView fitHeight="66.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
+          <image>
+            <Image url="@mountains_3.png" />
+          </image>
+        </ImageView>
+        <ImageView fitHeight="72.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="2">
+          <image>
+            <Image url="@mountains_1.png" />
+          </image>
+        </ImageView>
+        <ImageView fitHeight="159.99995907345314" fitWidth="110.9999771118164" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4">
+          <image>
+            <Image url="@river.gif" />
+          </image>
+        </ImageView>
+        <ImageView fitHeight="160.00000625610352" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" rotate="180.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+          <image>
+            <Image url="@river.gif" />
+          </image>
+        </ImageView>
+        <ImageView fitHeight="160.00000625610352" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="3">
+          <image>
+            <Image url="@river.gif" />
+          </image>
+        </ImageView>
+        <ImageView fitHeight="160.00000625610352" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" rotate="180.0" GridPane.columnIndex="4" GridPane.rowIndex="4">
+          <image>
+            <Image url="@river.gif" />
+          </image>
+        </ImageView>
+        <ImageView fitHeight="53.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+          <image>
+            <Image url="@mountains_1.png" />
+          </image>
+          <GridPane.margin>
+            <Insets />
+          </GridPane.margin>
+        </ImageView>
+        <ImageView fitHeight="74.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6">
+          <image>
+            <Image url="@mountains_3.png" />
+          </image>
+        </ImageView>
+        <ImageView fitHeight="69.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+          <image>
+            <Image url="@mountains_2.png" />
+          </image>
+        </ImageView>
+        <ImageView fitHeight="80.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4">
+          <image>
+            <Image url="@mountains_2.png" />
+          </image>
+        </ImageView>
+        <ImageView fitHeight="63.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="3">
+          <image>
+            <Image url="@mountains_2.png" />
+          </image>
+        </ImageView>
+        <ImageView fitHeight="68.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="4">
+          <image>
+            <Image url="@mountains_2.png" />
+          </image>
+        </ImageView>
+        <ImageView fitHeight="58.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+          <image>
+            <Image url="@mountains_1.png" />
+          </image>
+        </ImageView>
+        <ImageView fitHeight="71.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="1">
+          <image>
+            <Image url="@mountains_3.png" />
+          </image>
+        </ImageView>
+        <ImageView fitHeight="160.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="2">
+          <image>
+            <Image url="@small_town.png" />
+          </image>
+        </ImageView>
+        <Button fx:id="getIntoTown" mnemonicParsing="false" onAction="#getIntoAndOutOfTown" opacity="0.3" prefHeight="160.0" prefWidth="111.0" text="Town" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+        <Button fx:id="P0" mnemonicParsing="false" onAction="#plotButtonAction" opacity="0.3" prefHeight="160.0" prefWidth="145.0" text="P0" />
+        <Button fx:id="P2" mnemonicParsing="false" onAction="#plotButtonAction" opacity="0.3" prefHeight="160.0" prefWidth="145.0" text="P2" textAlignment="CENTER" GridPane.columnIndex="2" />
+        <Button fx:id="P1" mnemonicParsing="false" onAction="#plotButtonAction" opacity="0.3" prefHeight="160.0" prefWidth="145.0" text="P1" GridPane.columnIndex="1" />
+        <Button fx:id="P11" mnemonicParsing="false" onAction="#plotButtonAction" opacity="0.3" prefHeight="160.0" prefWidth="145.0" text="P11" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+        <Button fx:id="P3" mnemonicParsing="false" onAction="#plotButtonAction" opacity="0.3" prefHeight="160.0" prefWidth="145.0" text="P3" GridPane.columnIndex="3" />
+        <Button fx:id="P4" mnemonicParsing="false" onAction="#plotButtonAction" opacity="0.3" prefHeight="160.0" prefWidth="145.0" text="P4" GridPane.columnIndex="4" />
+        <Button fx:id="P5" mnemonicParsing="false" onAction="#plotButtonAction" opacity="0.3" prefHeight="160.0" prefWidth="145.0" text="P5" GridPane.columnIndex="5" />
+        <Button fx:id="P7" mnemonicParsing="false" onAction="#plotButtonAction" opacity="0.3" prefHeight="160.0" prefWidth="145.0" text="P7" GridPane.columnIndex="7" />
+        <Button fx:id="P8" mnemonicParsing="false" onAction="#plotButtonAction" opacity="0.3" prefHeight="160.0" prefWidth="145.0" text="P8" GridPane.columnIndex="8" />
+        <Button fx:id="P9" mnemonicParsing="false" onAction="#plotButtonAction" opacity="0.3" prefHeight="160.0" prefWidth="145.0" text="P9" GridPane.rowIndex="1" />
+        <Button fx:id="P12" mnemonicParsing="false" onAction="#plotButtonAction" opacity="0.3" prefHeight="160.0" prefWidth="145.0" text="P12" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+        <Button fx:id="P13" mnemonicParsing="false" onAction="#plotButtonAction" opacity="0.3" prefHeight="160.0" prefWidth="145.0" text="P13" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+        <Button fx:id="P14" mnemonicParsing="false" onAction="#plotButtonAction" opacity="0.3" prefHeight="160.0" prefWidth="145.0" text="P14" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+        <Button fx:id="P15" mnemonicParsing="false" onAction="#plotButtonAction" opacity="0.3" prefHeight="160.0" prefWidth="145.0" text="P15" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+        <Button fx:id="P16" mnemonicParsing="false" onAction="#plotButtonAction" opacity="0.3" prefHeight="160.0" prefWidth="145.0" text="P16" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+        <Button fx:id="P19" mnemonicParsing="false" onAction="#plotButtonAction" opacity="0.3" prefHeight="160.0" prefWidth="145.0" text="P19" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Button fx:id="P20" mnemonicParsing="false" onAction="#plotButtonAction" opacity="0.3" prefHeight="160.0" prefWidth="145.0" text="P20" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+        <Button fx:id="P21" mnemonicParsing="false" onAction="#plotButtonAction" opacity="0.3" prefHeight="160.0" prefWidth="145.0" text="P21" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+        <Button fx:id="P23" mnemonicParsing="false" onAction="#plotButtonAction" opacity="0.3" prefHeight="160.0" prefWidth="145.0" text="P23" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+        <Button fx:id="P24" mnemonicParsing="false" onAction="#plotButtonAction" opacity="0.3" prefHeight="160.0" prefWidth="145.0" text="P24" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+        <Button fx:id="P25" mnemonicParsing="false" onAction="#plotButtonAction" opacity="0.3" prefHeight="160.0" prefWidth="145.0" text="P25" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+        <Button fx:id="P27" mnemonicParsing="false" onAction="#plotButtonAction" opacity="0.3" prefHeight="160.0" prefWidth="145.0" text="P27" GridPane.rowIndex="3" />
+        <Button fx:id="P29" mnemonicParsing="false" onAction="#plotButtonAction" opacity="0.3" prefHeight="160.0" prefWidth="145.0" text="P29" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+        <Button fx:id="P30" mnemonicParsing="false" onAction="#plotButtonAction" opacity="0.3" prefHeight="160.0" prefWidth="145.0" text="P30" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+        <Button fx:id="P31" mnemonicParsing="false" onAction="#plotButtonAction" opacity="0.3" prefHeight="160.0" prefWidth="145.0" text="P31" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+        <Button fx:id="P32" mnemonicParsing="false" onAction="#plotButtonAction" opacity="0.3" prefHeight="160.0" prefWidth="145.0" text="P32" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+        <Button fx:id="P34" mnemonicParsing="false" onAction="#plotButtonAction" opacity="0.3" prefHeight="160.0" prefWidth="145.0" text="P34" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+        <Button fx:id="P35" mnemonicParsing="false" onAction="#plotButtonAction" opacity="0.3" prefHeight="160.0" prefWidth="145.0" text="P35" GridPane.columnIndex="8" GridPane.rowIndex="3" />
+        <Button fx:id="P36" mnemonicParsing="false" onAction="#plotButtonAction" opacity="0.3" prefHeight="160.0" prefWidth="145.0" text="P36" GridPane.rowIndex="4" />
+        <Button fx:id="P37" mnemonicParsing="false" onAction="#plotButtonAction" opacity="0.3" prefHeight="160.0" prefWidth="145.0" text="P37" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <Button fx:id="P39" mnemonicParsing="false" onAction="#plotButtonAction" opacity="0.3" prefHeight="160.0" prefWidth="145.0" text="P39" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+        <Button fx:id="P40" mnemonicParsing="false" onAction="#plotButtonAction" opacity="0.3" prefHeight="160.0" prefWidth="145.0" text="P40" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+        <Button fx:id="P41" mnemonicParsing="false" onAction="#plotButtonAction" opacity="0.3" prefHeight="160.0" prefWidth="145.0" text="P41" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+        <Button fx:id="P42" mnemonicParsing="false" onAction="#plotButtonAction" opacity="0.3" prefHeight="160.0" prefWidth="145.0" text="P42" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+        <Button fx:id="P43" mnemonicParsing="false" onAction="#plotButtonAction" opacity="0.3" prefHeight="160.0" prefWidth="145.0" text="P43" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+        <Button fx:id="P6" mnemonicParsing="false" onAction="#plotButtonAction" opacity="0.3" prefHeight="160.0" prefWidth="145.0" text="P6" GridPane.columnIndex="6" />
+        <Button fx:id="P10" mnemonicParsing="false" onAction="#plotButtonAction" opacity="0.3" prefHeight="160.0" prefWidth="145.0" text="P10" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Button fx:id="P17" mnemonicParsing="false" onAction="#plotButtonAction" opacity="0.3" prefHeight="160.0" prefWidth="145.0" text="P17" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+        <Button fx:id="P18" mnemonicParsing="false" onAction="#plotButtonAction" opacity="0.3" prefHeight="160.0" prefWidth="145.0" text="P18" GridPane.rowIndex="2" />
+        <Button fx:id="P28" mnemonicParsing="false" onAction="#plotButtonAction" opacity="0.3" prefHeight="160.0" prefWidth="145.0" text="P28" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <Button fx:id="P38" mnemonicParsing="false" onAction="#plotButtonAction" opacity="0.3" prefHeight="160.0" prefWidth="145.0" text="P38" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+        <Button fx:id="P33" mnemonicParsing="false" onAction="#plotButtonAction" opacity="0.3" prefHeight="160.0" prefWidth="145.0" text="P33" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+        <Button fx:id="P44" mnemonicParsing="false" onAction="#plotButtonAction" opacity="0.3" prefHeight="160.0" prefWidth="145.0" text="P44" GridPane.columnIndex="8" GridPane.rowIndex="4" />
+        <Button fx:id="P26" mnemonicParsing="false" onAction="#plotButtonAction" opacity="0.3" prefHeight="160.0" prefWidth="145.0" text="P26" GridPane.columnIndex="8" GridPane.rowIndex="2" />
+        <ButtonBar prefHeight="40.0" prefWidth="200.0" GridPane.columnIndex="8" GridPane.rowIndex="2" />
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints maxHeight="160.0" minHeight="160.0" prefHeight="160.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="160.0" minHeight="160.0" prefHeight="160.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="160.0" minHeight="160.0" prefHeight="160.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="160.0" minHeight="10.0" prefHeight="123.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="160.0" minHeight="160.0" prefHeight="160.0" valignment="CENTER" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+  </children>
+</AnchorPane>
